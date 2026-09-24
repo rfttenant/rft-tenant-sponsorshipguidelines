@@ -1,3 +1,19 @@
+const musicIntro = document.getElementById('musicIntro');
+const enterWebsite = document.getElementById('enterWebsite');
+const bgMusic = document.getElementById('bgMusic');
+
+enterWebsite.addEventListener('click', () => {
+  bgMusic.volume = 0.25;
+
+  bgMusic.play()
+    .then(() => {
+      musicIntro.classList.add('hide');
+    })
+    .catch(error => {
+      console.log("Music gagal dimainkan:", error);
+      musicIntro.classList.add('hide');
+    });
+});
 const nav = document.querySelector('.nav');
 document.querySelector('.menu-toggle').addEventListener('click', () => nav.classList.toggle('open'));
 document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));

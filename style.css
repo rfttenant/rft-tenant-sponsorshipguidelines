@@ -953,3 +953,61 @@ h1 em,h2 em{font-weight:400}
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* =========================================
+   MUSIC INTRO
+   ========================================= */
+
+.music-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: #202722;
+  color: #faf9f4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition:
+    opacity .8s ease,
+    visibility .8s ease;
+}
+
+.music-intro.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.music-intro-content {
+  padding: 30px;
+}
+
+.music-intro .eyebrow {
+  color: #aeb5ad;
+}
+
+.music-intro h2 {
+  color: #faf9f4;
+  font-size: clamp(65px, 10vw, 120px);
+  margin-bottom: 18px;
+}
+
+.music-intro h2 em {
+  color: #d8d0bf;
+}
+
+.music-intro-content > p:not(.eyebrow) {
+  color: #aeb5ad;
+  font-size: 12px;
+  letter-spacing: .08em;
+  margin-bottom: 35px;
+}
+
+.music-intro .btn {
+  min-width: 190px;
+}
